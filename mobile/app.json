@@ -1,0 +1,40 @@
+{
+  "expo": {
+    "name": "La Bobine",
+    "slug": "la-bobine",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#F5E6D3"
+    },
+    "ios": {
+      "supportsTablet": false,
+      "bundleIdentifier": "com.labobine.app",
+      "infoPlist": {
+        "NSCameraUsageDescription": "La Bobine a besoin de la caméra pour prendre des photos de vos créations.",
+        "NSPhotoLibraryUsageDescription": "La Bobine a besoin d'accéder à vos photos pour les associer à vos commandes."
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#F5E6D3"
+      },
+      "package": "com.labobine.app",
+      "permissions": ["CAMERA", "READ_EXTERNAL_STORAGE", "WRITE_EXTERNAL_STORAGE"]
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      "expo-font",
+      "expo-secure-store",
+      ["expo-image-picker", { "photosPermission": "La Bobine accède à vos photos pour vos créations." }],
+      ["expo-notifications", { "icon": "./assets/notification-icon.png", "color": "#C8956C" }]
+    ]
+  }
+}
